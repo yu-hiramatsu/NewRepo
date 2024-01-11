@@ -40,6 +40,7 @@
             panel1 = new Panel();
             listBox1 = new ListBox();
             pictureBox1 = new PictureBox();
+            saveToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -47,10 +48,10 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { openToolStripMenuItem, writeDateToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { openToolStripMenuItem, writeDateToolStripMenuItem, saveToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(476, 24);
+            menuStrip1.Size = new Size(508, 24);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -76,17 +77,18 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 24);
             panel1.Name = "panel1";
-            panel1.Size = new Size(476, 357);
+            panel1.Size = new Size(508, 357);
             panel1.TabIndex = 2;
             // 
             // listBox1
             // 
             listBox1.Dock = DockStyle.Right;
             listBox1.FormattingEnabled = true;
+            listBox1.HorizontalScrollbar = true;
             listBox1.ItemHeight = 15;
             listBox1.Location = new Point(341, 0);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(135, 357);
+            listBox1.Size = new Size(167, 357);
             listBox1.TabIndex = 1;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
@@ -100,11 +102,18 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
+            // saveToolStripMenuItem
+            // 
+            saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            saveToolStripMenuItem.Size = new Size(42, 20);
+            saveToolStripMenuItem.Text = "save";
+            saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(476, 381);
+            ClientSize = new Size(508, 381);
             Controls.Add(panel1);
             Controls.Add(menuStrip1);
             KeyPreview = true;
@@ -127,5 +136,6 @@
         private ToolStripMenuItem openToolStripMenuItem;
         private ToolStripMenuItem writeDateToolStripMenuItem;
         private ListBox listBox1;
+        private ToolStripMenuItem saveToolStripMenuItem;
     }
 }
